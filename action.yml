@@ -1,0 +1,13 @@
+name: 'Get list of modules'
+description: 'Get list of modules in project'
+inputs:
+  working-directory:
+    required: false
+    description: 'The working directory where modules will be find'
+    default: '.'
+outputs:
+  modules: 
+    description: 'List of modules'
+runs:
+  using: 'node12'
+  main: 'index.js'
