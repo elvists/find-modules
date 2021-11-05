@@ -5,6 +5,9 @@ inputs:
     required: false
     description: 'The working directory where modules will be find'
     default: '.'
+  subfolder-filter:
+    required: false
+    description: 'Filter modules if exist this folder'
 outputs:
   modules: 
     description: 'List of modules'
