@@ -1,5 +1,6 @@
-import { getInput, setOutput, setFailed } from '@actions/core';
-import { readdirSync } from 'fs';
+const core = require('@actions/core');
+const { readdirSync } = require('fs')
+
 
 
 const getDirectories = source =>
@@ -8,15 +9,15 @@ const getDirectories = source =>
         .map(dirent => dirent.name);
 
 try {
-    var workingDirectory = getInput('working-directory');
+    var workingDirectory = core.getInput('working-directory');
 
     console.log(`Find modules in ${workingDirectory}`);
     const modules = getDirectories(workingDirectory);
     console.log(`Modules list found: ${modules}`);
 
-    setOutput("modules", modules);
+    core.setOutput("modules", modules);
 
 } catch (error) {
-    setFailed(error.message);
+    core.setFailed(error.message);
 }
 
