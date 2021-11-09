@@ -1,3 +1,5 @@
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
 # Find Modules
 
 This action returns a list of modules/folders that are within a working directory.
@@ -45,3 +47,10 @@ find-modules:
         run: echo ${{ matrix.module }}
 
 ```
+
+
+## Contributing
+See the [Contributing Guide](https://github.com/elvists/find-modules/blob/main/CONTRIBUTING).
+
+## License
+See the [License File](https://github.com/elvists/find-modules/blob/main/LICENSE).
